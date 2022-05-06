@@ -27,12 +27,12 @@
           <p class="catalog-font">Экскурсии-онлайн</p>
         </a>
         <a href="#" class="catalog-element center">
-          <img src="./assets/Rectangle47.png" alt="#eror" class="catalog-img" />
-          <p class="catalog-font">Экскурсии-онлайн</p>
+          <img src="./assets/birds.png" alt="#eror" class="catalog-img" />
+          <p class="catalog-font">Родительский клуб</p>
         </a>
         <a href="#" class="catalog-element center">
-          <img src="./assets/Rectangle47.png" alt="#eror" class="catalog-img" />
-          <p class="catalog-font">Экскурсии-онлайн</p>
+          <img src="./assets/Flags.png" alt="#eror" class="catalog-img" />
+          <p class="catalog-font">Языковые клубы</p>
         </a>
       </div>
     </div>

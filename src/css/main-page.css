@@ -59,6 +59,7 @@
 .catalog-font {
   color: var(--main-color);
   font-size: 24px;
+  transition: 1s;
   font-weight: 400;
 }
 .block-h {
@@ -67,8 +68,14 @@
   margin: 0px;
 }
 .catalog-img {
-  max-width: 201px;
-  height: 197px;
+  max-height: 200px;
+  transition: 1s;
+}
+.catalog-element:hover .catalog-img {
+  transform: scale(1.1);
+}
+.catalog-element:hover .catalog-font {
+  transform: scale(1.1);
 }
 .advantages {
   background-color: var(--main-background);
