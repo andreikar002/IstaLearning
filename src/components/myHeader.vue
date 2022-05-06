@@ -1,7 +1,7 @@
 <template>
   <div class="container header">
     <img src=".\assets\logo.png" alt="#eror" class="logo" />
-    <template v-if="width > 660">
+    <template v-if="width > 600">
       <div class="container menu">
         <menu-button :objects="catalogObjects" :name="'Каталог'" />
         <menu-button :objects="aboutObjects" :name="'О нас'" />
@@ -44,8 +44,14 @@ export default {
 
   created() {
     this.width = screen.width;
+    window.addEventListener("resize", this.updateWidth);
   },
 
+  computed: {
+    screenWidth() {
+      return screen.width;
+    },
+  },
   data() {
     return {
       languages: ["RUS", "ENG", "GER", "FRA"],
@@ -89,6 +95,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    updateWidth() {
+      this.width = screen.width;
+    },
   },
 };
 </script>
