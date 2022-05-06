@@ -1,7 +1,7 @@
 <template>
   <div>
     <my-header :width="width" />
-    <div class="container center promo_clip">
+    <div class="container center promo_clip wrap">
       <div class="promo_clip-main">
         <h1>Lorem ipsum sit amet,</h1>
         <p>

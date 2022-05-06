@@ -42,6 +42,7 @@
 .promo_clip video {
   height: 317px;
   max-width: 551px;
+  max-width: 100vw;
 }
 .catalog {
   margin-top: 5vh;

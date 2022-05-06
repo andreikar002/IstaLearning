@@ -34,6 +34,12 @@
 .main-color {
   color: var(--main-color);
 }
+.position-a {
+  position: absolute;
+}
+.position-r {
+  position: relative;
+}
 a {
   text-decoration: none;
 }
