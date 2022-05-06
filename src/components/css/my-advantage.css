@@ -1,0 +1,20 @@
+.advantage-h {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 36px 0px 0px 0px;
+  max-width: 217px;
+}
+.advantage-p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 24px 0px 0px 0px;
+  max-width: 217px;
+}
+.advantage-img {
+  height: 50px;
+  max-width: 50px;
+}
+.advantage {
+  padding: 35px 35px 44px 37px;
+  max-width: 289px;
+}

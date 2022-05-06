@@ -1,0 +1,78 @@
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 3vw 7vh 3vw;
+  height: 55px;
+  background: #f8fafe;
+}
+.logo {
+  max-width: 120px;
+  max-height: 40px;
+}
+.menu {
+  grid-gap: 2.5vw;
+}
+.menu-element {
+  position: relative;
+  text-decoration: none;
+  border: none;
+  color: #001e5b;
+  background-color: white;
+  padding: 0px;
+  font-size: calc((100vw - 300px) / (1140 - 300) * (18 - 10) + 15px);
+}
+.menu-element:hover {
+  cursor: pointer;
+}
+.menu-console {
+  display: inline-block;
+  position: absolute;
+  top: 8.2vh;
+  margin-left: 1vw;
+  padding: 1vh 0px 2vh 0px;
+  background: rgba(248, 248, 248, 0.8);
+  border: 2px solid #cbe2ef;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: auto;
+  max-width: 11.5vw;
+  z-index: 2;
+}
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  z-index: 2;
+}
+.menu-console-element {
+  width: 100%;
+  position: relative;
+  font-size: calc((100vw - 300px) / (1140 - 300) * (14 - 10) + 10px);
+}
+.menu-console-element:hover {
+  background: #cbe2ef;
+}
+.console-link-container {
+  padding-right: 1vw;
+  padding-left: 1vw;
+}
+.imgLang {
+  position: absolute;
+  z-index: 1;
+}
+.lang-p {
+  font-size: calc((100vw - 300px) / (1140 - 300) * (15 - 13) + 13px);
+  font-weight: 600;
+}
+.button-gr {
+  padding: 1vh 1.5vw;
+  color: #fff;
+  background: linear-gradient(
+    258.26deg,
+    #423994 13.49%,
+    #f70d66 70.92%,
+    #f5423e 93.06%
+  );
+  border-radius: 30px;
+  font-weight: 600;
+}

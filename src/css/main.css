@@ -1,0 +1,43 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+:root {
+  --main-color: #001e5b;
+  --main-background: #f8fafe;
+}
+.w-100 {
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1950px;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.grid-1 {
+  grid-gap: 18.33px;
+}
+.grid-5 {
+  grid-gap: 66px;
+}
+.display-c {
+  display: flex;
+  flex-direction: column;
+}
+.main-color {
+  color: var(--main-color);
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background-color: #fff;
+}
