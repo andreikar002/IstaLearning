@@ -35,6 +35,9 @@
 .menu-element:hover {
   cursor: pointer;
 }
+.menu-button:hover {
+  cursor: pointer;
+}
 .menu-console {
   display: inline-block;
   position: absolute;
@@ -72,8 +75,11 @@
   z-index: 1;
 }
 .lang-p {
-  font-size: calc((100vw - 300px) / (1140 - 300) * (15 - 13) + 13px);
+  font-size: 15px;
   font-weight: 600;
+  z-index: 2;
+  color: #fff;
+  margin: 5px 0px 0px 10px;
 }
 .button-gr {
   padding: 7px 25px;
@@ -86,4 +92,12 @@
   );
   border-radius: 30px;
   font-weight: 600;
+}
+.langIMG {
+  position:absolute;
+  z-index: 1;
+}
+.langUp {
+  margin: 10px 0px 0px 18px;
+  height: 10px;
 }

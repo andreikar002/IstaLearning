@@ -7,11 +7,13 @@
         <menu-button :objects="aboutObjects" :name="'О нас'" />
         <a href="#" class="menu-element">Блог</a>
         <a href="#" class="menu-element">Контакты</a>
+        <button-lang :activeLang="activeLanguge" />
         <a href="#" class="button-gr">Войти</a>
       </div>
     </template>
     <template v-else>
       <div class="container grid-1 center">
+        <button-lang :activeLang="activeLanguge" />
         <a href="#" class="button-gr">Войти</a>
         <div class="display-c grid-1 gamburger">
           <button @click="gamburger = !gamburger" class="position-r">
@@ -35,11 +37,13 @@
 </template>
 
 <script>
+import ButtonLang from "./buttonLang.vue";
 import menuButton from "./menuButton.vue";
 
 export default {
   components: {
     menuButton,
+    ButtonLang,
   },
 
   created() {
