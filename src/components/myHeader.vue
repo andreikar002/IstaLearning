@@ -1,19 +1,19 @@
 <template>
   <div class="container header">
     <img src=".\assets\logo.png" alt="#eror" class="logo" />
-    <template v-if="width > 600">
+    <template v-if="width > 620">
       <div class="container menu">
         <menu-button :objects="catalogObjects" :name="'Каталог'" />
         <menu-button :objects="aboutObjects" :name="'О нас'" />
         <a href="#" class="menu-element">Блог</a>
         <a href="#" class="menu-element">Контакты</a>
-        <button-lang :activeLang="activeLanguge" />
+        <button-lang />
         <a href="#" class="button-gr">Войти</a>
       </div>
     </template>
     <template v-else>
-      <div class="container grid-1 center">
-        <button-lang :activeLang="activeLanguge" />
+      <div class="menu container center">
+        <button-lang />
         <a href="#" class="button-gr">Войти</a>
         <div class="display-c grid-1 gamburger">
           <button @click="gamburger = !gamburger" class="position-r">

@@ -1,28 +1,39 @@
 <template>
   <button class="menu-button container" @click="isActive = !isActive">
-    <img
-      :src="require(`@/components/assets/${activeLang}pick.png`)"
-      alt="#eror"
-      class="langIMG"
-    />
-    <p class="lang-p">{{ activeLang }}</p>
+    <div class="colsole-lang-container container center">
+      <img
+        :src="require(`@/components/assets/${activeLang}pick.png`)"
+        alt="#eror"
+        class="langIMG"
+      />
+      <p class="console-lang-p">{{ activeLang }}</p>
+    </div>
     <img v-if="isActive" src="./assets/to_down.png" alt="" class="langUp" />
     <img v-else src="./assets/to_up.png" alt="" class="langUp" />
-  </button>
-  <template v-if="isActive">
-    <div class="menu-console">
-      <div v-for="lang in langs" :key="lang.name" class="menu-console-element">
-        <div class="console-link-container">
-          <img
-            :src="require(`@/components/assets/${lang.name}pick.png`)"
-            alt="#eror"
-            class="langIMG"
-          />
-          <p class="lang-p">{{ lang.name }}</p>
+    <template v-if="isActive">
+      <div class="menu-console">
+        <div
+          v-for="lang in filteredLangs"
+          :key="lang.name"
+          class="menu-console-element"
+        >
+          <button
+            @click="changeActiveLang(lang.name)"
+            class="console-lang-item-container container center"
+          >
+            <div class="colsole-lang-container container center">
+              <img
+                :src="require(`@/components/assets/${lang.name}pick.png`)"
+                alt="#eror"
+                class="langIMG"
+              />
+              <p class="console-lang-p">{{ lang.name }}</p>
+            </div>
+          </button>
         </div>
       </div>
-    </div>
-  </template>
+    </template>
+  </button>
 </template>
 
 <script>
@@ -36,18 +47,22 @@ export default {
         { name: "FRA" },
         { name: "GER" },
       ],
+      activeLang: "ENG",
     };
-  },
-  props: {
-    activeLang: {
-      type: String,
-      required: false,
-    },
   },
 
   methods: {
     consoleMenuChange() {
       this.isActive = !this.isActive;
+    },
+    changeActiveLang(name) {
+      this.activeLang = name;
+    },
+  },
+
+  computed: {
+    filteredLangs() {
+      return this.langs.filter((t) => t.name != this.activeLang);
     },
   },
 };

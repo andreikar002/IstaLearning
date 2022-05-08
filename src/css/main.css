@@ -40,6 +40,9 @@
 .position-r {
   position: relative;
 }
+.ml-1 {
+  margin-left: 1vw;
+}
 a {
   text-decoration: none;
 }

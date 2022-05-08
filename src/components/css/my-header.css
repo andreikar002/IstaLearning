@@ -41,15 +41,12 @@
 .menu-console {
   display: inline-block;
   position: absolute;
-  top: 8.2vh;
-  margin-left: 1vw;
+  top: 50px;
   padding: 1vh 0px 2vh 0px;
   background: rgba(248, 248, 248, 0.8);
   border: 2px solid #cbe2ef;
   box-sizing: border-box;
-  border-radius: 15px;
-  width: auto;
-  max-width: 11.5vw;
+  border-radius: 15px;  
   z-index: 2;
 }
 .menu-button {
@@ -60,7 +57,6 @@
 }
 .menu-console-element {
   width: 100%;
-  position: relative;
   font-size: calc((100vw - 300px) / (1140 - 300) * (14 - 10) + 10px);
 }
 .menu-console-element:hover {
@@ -94,10 +90,38 @@
   font-weight: 600;
 }
 .langIMG {
-  position:absolute;
+  position: absolute;
   z-index: 1;
 }
 .langUp {
-  margin: 10px 0px 0px 18px;
+  margin: 10px 0px 0px 5px;
   height: 10px;
+}
+.console-lang-item-container {
+  height: 36px;
+  width: 82px;
+}
+.console-lang-item-container:hover {
+  cursor: pointer;
+  background: #cbe2ef;
+}
+.colsole-lang-container {
+  width: 54px;
+  height: 28px;
+}
+.console-lang-p {
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 2;
+  color: #fff;
+}
+@media screen and (max-width: 400px) {
+  .menu {
+    grid-gap: 1vw;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header {
+    padding: 1vh 0px 7vh 2vw;
+  }
 }
