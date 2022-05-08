@@ -3,7 +3,7 @@
     <img src=".\assets\logo.png" alt="#eror" class="logo" />
     <template v-if="width > 620">
       <div class="container menu">
-        <menu-button :objects="catalogObjects" :name="'Каталог'" />
+        <menu-button :objects="catalogObjects" :name="'Каталог'" :ref="foo" />
         <menu-button :objects="aboutObjects" :name="'О нас'" />
         <a href="#" class="menu-element">Блог</a>
         <a href="#" class="menu-element">Контакты</a>
@@ -17,11 +17,15 @@
         <a href="#" class="button-gr">Войти</a>
         <div class="display-c grid-1 gamburger">
           <button @click="gamburger = !gamburger" class="position-r">
-            GAM
+            <img
+              src="./assets/hamburger.png"
+              alt="#eror"
+              class="gamburger-img"
+            />
           </button>
           <template v-if="gamburger">
             <div
-              class="display-c gamburger-menu position-a"
+              class="display-c center gamburger-menu position-a"
               :style="{ left: width - 80 + 'px' }"
             >
               <menu-button :objects="catalogObjects" :name="'Каталог'" />

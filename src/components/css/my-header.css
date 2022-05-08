@@ -17,12 +17,17 @@
   justify-content: left;
 }
 .gamburger-menu {
-  grid-gap: 0.5vh;
+  position: absolute;
   top: 50px;
-  background-color: black;
-  align-items: flex-start;
-  justify-content: right;
-  width: 80px;
+  padding: 1vh 0px 2vh 0px;
+  background: rgba(248, 248, 248, 0.8);
+  border: 2px solid #cbe2ef;
+  box-sizing: border-box;
+  border-radius: 15px;  
+  z-index: 2;
+}
+.gamburger-menu button {
+  background: rgba(248, 248, 248, 0.8);
 }
 .menu-element {
   position: relative;
@@ -115,6 +120,10 @@
   z-index: 2;
   color: #fff;
 }
+.gamburger-img {
+  width: 40px;
+  height: 40px;
+}
 @media screen and (max-width: 400px) {
   .menu {
     grid-gap: 1vw;
@@ -123,5 +132,20 @@
 @media screen and (max-width: 620px) {
   .header {
     padding: 1vh 0px 7vh 2vw;
+  }
+  .menu-console {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 85px;
+    padding: 1vh 0px 2vh 0px;
+    background: rgba(248, 248, 248, 0.8);
+    border: 2px solid #cbe2ef;
+    box-sizing: border-box;
+    border-radius: 15px;  
+    z-index: 2;
+  }
+  .gamburger-menu {
+    width:85px;
   }
 }
