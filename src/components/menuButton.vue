@@ -19,15 +19,9 @@ export default {
     consoleMenu,
   },
 
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-
   props: {
-    othersConsoles: {
-      type: Array,
+    isActive: {
+      type: Boolean,
       required: false,
     },
     objects: {
@@ -42,7 +36,7 @@ export default {
 
   methods: {
     consoleMenuChange() {
-      this.isActive = !this.isActive;
+      this.$emit("open", this.name);
     },
   },
 };

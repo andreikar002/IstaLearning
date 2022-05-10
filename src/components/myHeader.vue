@@ -3,20 +3,30 @@
     <img src=".\assets\logo.png" alt="#eror" class="logo" />
     <template v-if="width > 620">
       <div class="container menu">
-        <menu-button :objects="catalogObjects" :name="'Каталог'" :ref="foo" />
-        <menu-button :objects="aboutObjects" :name="'О нас'" />
+        <menu-button
+          :objects="catalogObjects"
+          :name="'Каталог'"
+          :isActive="isOpened.catalog"
+          @open="openConsole('catalog')"
+        />
+        <menu-button
+          :objects="aboutObjects"
+          :name="'О нас'"
+          :isActive="isOpened.about"
+          @open="openConsole('about')"
+        />
         <a href="#" class="menu-element">Блог</a>
         <a href="#" class="menu-element">Контакты</a>
-        <button-lang />
+        <button-lang @open="openConsole('lang')" :isActive="isOpened.lang" />
         <a href="#" class="button-gr">Войти</a>
       </div>
     </template>
     <template v-else>
       <div class="menu container center">
-        <button-lang />
+        <button-lang @open="openConsole('lang')" :isActive="isOpened.lang" />
         <a href="#" class="button-gr">Войти</a>
         <div class="display-c grid-1 gamburger">
-          <button @click="gamburger = !gamburger" class="position-r">
+          <button @click="openConsole('gamburger')" class="position-r">
             <img
               src="./assets/hamburger.png"
               alt="#eror"
@@ -28,8 +38,18 @@
               class="display-c center gamburger-menu position-a"
               :style="{ left: width - 80 + 'px' }"
             >
-              <menu-button :objects="catalogObjects" :name="'Каталог'" />
-              <menu-button :objects="aboutObjects" :name="'О нас'" />
+              <menu-button
+                :objects="catalogObjects"
+                :name="'Каталог'"
+                :isActive="isOpened.catalog"
+                @open="openConsole('catalog')"
+              />
+              <menu-button
+                :objects="aboutObjects"
+                :name="'О нас'"
+                :isActive="isOpened.about"
+                @open="openConsole('about')"
+              />
               <a href="#" class="menu-element">Блог</a>
               <a href="#" class="menu-element">Контакты</a>
             </div>
@@ -43,7 +63,6 @@
 <script>
 import ButtonLang from "./buttonLang.vue";
 import menuButton from "./menuButton.vue";
-
 export default {
   components: {
     menuButton,
@@ -102,11 +121,40 @@ export default {
           name: "object4",
         },
       ],
+      isOpened: {
+        catalog: false,
+        about: false,
+        lang: false,
+      },
     };
   },
   methods: {
     updateWidth() {
       this.width = screen.width;
+    },
+    openConsole(name) {
+      if (name === "catalog") {
+        this.isOpened.catalog = !this.isOpened.catalog;
+        this.isOpened.about = false;
+        this.isOpened.lang = false;
+      }
+      if (name === "about") {
+        this.isOpened.about = !this.isOpened.about;
+        this.isOpened.catalog = false;
+        this.isOpened.lang = false;
+      }
+      if (name === "lang") {
+        this.isOpened.lang = !this.isOpened.lang;
+        this.isOpened.catalog = false;
+        this.isOpened.about = false;
+        this.gamburger = false;
+      }
+      if (name === "gamburger") {
+        this.gamburger = !this.gamburger;
+        this.isOpened.catalog = false;
+        this.isOpened.about = false;
+        this.isOpened.lang = false;
+      }
     },
   },
 };

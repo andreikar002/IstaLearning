@@ -23,7 +23,7 @@
   background: rgba(248, 248, 248, 0.8);
   border: 2px solid #cbe2ef;
   box-sizing: border-box;
-  border-radius: 15px;  
+  border-radius: 15px;
   z-index: 2;
 }
 .gamburger-menu button {
@@ -51,7 +51,18 @@
   background: rgba(248, 248, 248, 0.8);
   border: 2px solid #cbe2ef;
   box-sizing: border-box;
-  border-radius: 15px;  
+  border-radius: 15px;
+  z-index: 2;
+}
+.menu-console-gam {
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  padding: 1vh 0px 2vh 0px;
+  background: rgba(248, 248, 248, 0.8);
+  border: 2px solid #cbe2ef;
+  box-sizing: border-box;
+  border-radius: 15px;
   z-index: 2;
 }
 .menu-button {
@@ -63,13 +74,18 @@
 .menu-console-element {
   width: 100%;
   font-size: calc((100vw - 300px) / (1140 - 300) * (14 - 10) + 10px);
+  opacity: 0.7;
 }
 .menu-console-element:hover {
   background: #cbe2ef;
+  opacity: 1;
 }
 .console-link-container {
   padding-right: 1vw;
   padding-left: 1vw;
+}
+.console-link-container a {
+  color: #001e5b;
 }
 .imgLang {
   position: absolute;
@@ -133,7 +149,7 @@
   .header {
     padding: 1vh 0px 7vh 2vw;
   }
-  .menu-console {
+  .menu-console-gam {
     display: inline-block;
     position: absolute;
     top: 10px;
@@ -142,10 +158,10 @@
     background: rgba(248, 248, 248, 0.8);
     border: 2px solid #cbe2ef;
     box-sizing: border-box;
-    border-radius: 15px;  
+    border-radius: 15px;
     z-index: 2;
   }
   .gamburger-menu {
-    width:85px;
+    width: 85px;
   }
 }

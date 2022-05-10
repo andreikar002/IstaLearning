@@ -1,5 +1,5 @@
 <template>
-  <button class="menu-button container" @click="isActive = !isActive">
+  <button class="menu-button container" @click="consoleMenuChange">
     <div class="colsole-lang-container container center">
       <img
         :src="require(`@/components/assets/${activeLang}pick.png`)"
@@ -40,7 +40,6 @@
 export default {
   data() {
     return {
-      isActive: false,
       langs: [
         { name: "RUS" },
         { name: "ENG" },
@@ -50,10 +49,15 @@ export default {
       activeLang: "ENG",
     };
   },
-
+  props: {
+    isActive: {
+      type: Boolean,
+      required: false,
+    },
+  },
   methods: {
     consoleMenuChange() {
-      this.isActive = !this.isActive;
+      this.$emit("open", this.name);
     },
     changeActiveLang(name) {
       this.activeLang = name;

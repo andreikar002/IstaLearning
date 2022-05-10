@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-console ml-1">
+  <div class="menu-console-gam ml-1">
     <div
       v-for="object in objects"
       :key="object.name"
