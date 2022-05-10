@@ -65,6 +65,7 @@
 .block-h {
   color: var(--main-color);
   font-size: 48px;
+  font-weight: 400;
   margin: 0px;
 }
 .catalog-img {
@@ -105,4 +106,11 @@
   color: #001e5b;
   padding: 15px;
   border-radius: 70px;
+}
+.sertificates-container {
+  grid-gap: 30px;
+}
+.sertificate-block {
+  margin-top: 35px;
+  grid-gap: 20px;
 }

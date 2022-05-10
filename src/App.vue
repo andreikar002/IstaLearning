@@ -55,18 +55,28 @@
       </p>
       <a href="#">Пройти анкетирование</a>
     </div>
+    <div class="block sertificate-block">
+      <h2 class="block-h">НАШИ СЕРТИФИКАТЫ</h2>
+      <div class="container center wrap sertificates-container">
+        <my-sertificate :sertificateNum="1" />
+        <my-sertificate :sertificateNum="2" />
+        <my-sertificate :sertificateNum="3" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import myAdvantage from "./components/myAdvantage.vue";
-import myHeader from "./components/myHeader.vue";
+import myHeader from "./components/header/myHeader.vue";
+import mySertificate from "./components/mySertificate.vue";
 
 export default {
   name: "App",
   components: {
     myHeader,
     myAdvantage,
+    mySertificate,
   },
   created() {
     this.width = screen.width;
