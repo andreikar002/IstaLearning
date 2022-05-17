@@ -1,0 +1,19 @@
+.feedback {
+  width: 25vw;
+  height: 20vw;
+  padding: 35px;
+  background-color: #cbe2ef;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+.feedback img {
+  max-width: 40px;
+}
+.feedback p {
+  color: #001e5b;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  margin-top: 15px;
+  font-style: normal;
+  line-height: 150%;
+}

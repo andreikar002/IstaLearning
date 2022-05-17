@@ -23,15 +23,25 @@
       <h2 class="block-h">Каталог</h2>
       <div class="container grid-1 w-100 center wrap">
         <a href="#" class="catalog-element center">
-          <img src="./assets/Rectangle47.png" alt="#eror" class="catalog-img" />
+          <div class="catalog-img-container container center">
+            <img
+              src="./assets/Rectangle47.png"
+              alt="#eror"
+              class="catalog-img"
+            />
+          </div>
           <p class="catalog-font">Экскурсии-онлайн</p>
         </a>
         <a href="#" class="catalog-element center">
-          <img src="./assets/birds.png" alt="#eror" class="catalog-img" />
+          <div class="catalog-img-container">
+            <img src="./assets/birds.png" alt="#eror" class="catalog-img" />
+          </div>
           <p class="catalog-font">Родительский клуб</p>
         </a>
         <a href="#" class="catalog-element center">
-          <img src="./assets/Flags.png" alt="#eror" class="catalog-img" />
+          <div class="catalog-img-container">
+            <img src="./assets/Flags.png" alt="#eror" class="catalog-img" />
+          </div>
           <p class="catalog-font">Языковые клубы</p>
         </a>
       </div>
@@ -62,6 +72,11 @@
         <my-sertificate :sertificateNum="2" />
         <my-sertificate :sertificateNum="3" />
       </div>
+      <a href="#">Смотреть ещё</a>
+    </div>
+    <div class="block feedbacks-block">
+      <h2 class="block-h">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+      <my-feedback />
     </div>
   </div>
 </template>
@@ -70,6 +85,7 @@
 import myAdvantage from "./components/myAdvantage.vue";
 import myHeader from "./components/header/myHeader.vue";
 import mySertificate from "./components/mySertificate.vue";
+import myFeedback from "./components/myFeedback.vue";
 
 export default {
   name: "App",
@@ -77,6 +93,7 @@ export default {
     myHeader,
     myAdvantage,
     mySertificate,
+    myFeedback,
   },
   created() {
     this.width = screen.width;

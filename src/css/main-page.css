@@ -8,7 +8,7 @@
 .promo_clip {
   background: #f8fafe;
   margin-top: 0vh;
-  padding-bottom: 2vh;
+  padding-bottom: 5vh;
   grid-gap: 10vw;
 }
 .promo_clip-main {
@@ -45,16 +45,31 @@
   max-width: 100vw;
 }
 .catalog {
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 .catalog-element {
   display: flex;
   flex-direction: column;
-  padding: 35px 45px 21px 45px;
+  padding: 35px 4vw 21px 4vw;
   background-color: #cbe2ef;
-  max-width: 350px;
-  width: 75%;
+  max-width: 430px;
+  min-width: 20vw;
   height: 250px;
+}
+@media screen and (max-width: 620px) {
+  .catalog-element {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 1130px)  and (min-width: 620px) {
+  .catalog-element {
+    padding: 35px 15vw 21px 15vw;
+    width: 60vw;
+  }
+}
+.catalog-img-container {
+  max-width: 430px;
+  min-width: 260px;
 }
 .catalog-font {
   color: var(--main-color);
@@ -64,12 +79,13 @@
 }
 .block-h {
   color: var(--main-color);
-  font-size: 48px;
+  font-size: calc((100vw - 300px) / (1140 - 300) * (48 - 30) + 30px);
   font-weight: 400;
   margin: 0px;
 }
 .catalog-img {
   max-height: 200px;
+  max-width: 90vw;
   transition: 1s;
 }
 .catalog-element:hover .catalog-img {
@@ -109,8 +125,20 @@
 }
 .sertificates-container {
   grid-gap: 30px;
+  max-width: 100vw;
 }
 .sertificate-block {
   margin-top: 35px;
   grid-gap: 20px;
+}
+.sertificate-block a {
+  color: #003c84;
+  font-size: 18px;
+  font-weight: 600;
+}
+.feedbacks-block {
+  padding: 35px 0px;
+  margin-top: 36px;
+  grid-gap: 20px;
+  background-color: var(--main-background);
 }

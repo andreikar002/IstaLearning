@@ -18,3 +18,8 @@
   padding: 35px 35px 44px 37px;
   max-width: 200px;
 }
+@media screen and (min-width: 980px) and (max-width: 1350px) {
+  .advantage {
+    padding: 35px 100px 44px 100px;
+  }
+}

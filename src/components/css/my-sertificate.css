@@ -1,9 +1,10 @@
 .sertificate {
-  padding: 13px 17px 3px 17px;
+  padding: 13px 17px 13px 17px;
   max-width: 430px;
   background: linear-gradient(322.57deg, #186e9e -9.6%, #bad4e2 106.67%);
 }
 .sertificate img {
-  width: 395px;
-
+  max-width: 88vw;
+  max-height: 276px;
+  transition-duration: 1s;
 }
